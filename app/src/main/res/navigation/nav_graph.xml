@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/showCarsFragment">
 
+    <fragment
+        android:id="@+id/showCarsFragment"
+        android:name="com.example.pruebaparcial01.ui.car.showcars.ShowCarsFragment"
+        android:label="fragment_show_cars"
+        tools:layout="@layout/fragment_show_cars" >
+        <action
+            android:id="@+id/action_showCarsFragment_to_newCarFragment"
+            app:destination="@id/newCarFragment" />
+        <action
+            android:id="@+id/action_showCarsFragment_to_carFragment"
+            app:destination="@id/carFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.example.pruebaparcial01.ui.car.CarFragment"
+        android:label="fragment_car"
+        tools:layout="@layout/fragment_car" >
+        <action
+            android:id="@+id/action_carFragment_to_showCarsFragment"
+            app:destination="@id/showCarsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCarFragment"
+        android:name="com.example.pruebaparcial01.ui.car.newcar.NewCarFragment"
+        android:label="fragment_new_car"
+        tools:layout="@layout/fragment_new_car" >
+        <action
+            android:id="@+id/action_newCarFragment_to_showCarsFragment"
+            app:destination="@id/showCarsFragment" />
+    </fragment>
 </navigation>
