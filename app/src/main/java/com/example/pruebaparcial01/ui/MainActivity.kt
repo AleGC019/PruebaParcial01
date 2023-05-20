@@ -1,7 +1,8 @@
-package com.example.pruebaparcial01
+package com.example.pruebaparcial01.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pruebaparcial01.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
